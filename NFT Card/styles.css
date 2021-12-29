@@ -1,0 +1,77 @@
+/* card should have max width */
+:root {
+  --background-main: hsl(217, 54%, 11%);
+  --background-card: hsl(216, 50%, 16%);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--background-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 330px;
+}
+.card {
+  background: var(--background-card);
+  padding: 2.5rem 2.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__image {
+  width: 100%;
+}
+.card__image > img {
+  width: 100%;
+  border-radius: 7px;
+}
+h1 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.bottom__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eth {
+  display: flex;
+  align-items: center;
+}
+
+.eth h2 {
+  font-size: 18px;
+  color: #00fff8;
+}
+.eth img {
+  height: 1.5em;
+  width: auto;
+  margin-right: 1rem;
+}
+.timer {
+  display: flex;
+}
+.timer img {
+}
