@@ -22,24 +22,7 @@ body {
   height: 100vh;
 }
 
-.container {
-  width: 350px;
-}
-.card {
-  background: var(--background-card);
-  padding: 2.5rem 2.5rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.card__image {
-  width: 100%;
-  position: relative;
-}
-.card__image > img {
-  width: 100%;
-  border-radius: 7px;
-}
-
+/* Typography */
 h1 {
   color: #fff;
   font-size: 1.5em;
@@ -50,6 +33,26 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
+}
+.container {
+  width: 350px;
+}
+
+/* Card */
+.card {
+  background: var(--background-card);
+  padding: 2.5rem 2.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__image {
+  width: 100%;
+  position: relative;
+  transition: all 0.15s;
+}
+.card__image > img {
+  width: 100%;
+  border-radius: 7px;
 }
 
 .bottom__section {
@@ -77,6 +80,7 @@ p {
 }
 .timer img {
   margin-right: 0.5rem;
+  height: 25px;
 }
 
 hr {
@@ -96,14 +100,9 @@ hr {
   border-radius: 50%;
 }
 
+/* Hover Image */
 .card__image:hover::after {
-  opacity: 1;
-}
-
-.card__image:hover::after {
-  opacity: 1;
-}
-.card__image:hover::after {
+  cursor: pointer;
   position: absolute;
   content: url(images/icon-view.svg);
   width: 100%;
@@ -114,7 +113,17 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.15s;
 }
+.card__image:hover::after {
+  opacity: 1;
+  transition: all 0.15s;
+}
+
+.card__image:hover {
+  transition: all 0.15s;
+}
+
 .card__footer .toggler {
   color: #fff;
 }
