@@ -17,15 +17,18 @@ html {
 }
 body {
   font-family: "Red Hat Display", sans-serif;
+
+  background-color: var(--background-main);
+}
+button {
+  font-family: "Red Hat Display", sans-serif;
+}
+section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-button {
-  font-family: "Red Hat Display", sans-serif;
-}
-
 .container {
   max-width: 300px;
 }
@@ -34,6 +37,7 @@ button {
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 5%);
   overflow: hidden;
   border-radius: 15px;
+  background-color: #fff;
 }
 .card__body {
   padding: 2rem 3rem;
@@ -103,10 +107,48 @@ button {
   padding: 1.5rem 3rem;
   font-size: 12px;
   border: none;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 5%);
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 5%);
   transition: opacity 0.15s;
+  margin-bottom: 2rem;
 }
 
 button:hover {
   opacity: 0.7;
+}
+
+.cancel {
+  color: var(--color-desat);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.15s;
+}
+.cancel:hover {
+  color: var(--color-dark);
+}
+.change {
+  transition: all 0.15s;
+}
+.change:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.bg__image {
+  background: url("images/pattern-background-mobile.svg") no-repeat center/cover;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .bg__image {
+    background: url("images/pattern-background-desktop.svg") no-repeat
+      center/cover;
+    height: 50vh;
+  }
 }
